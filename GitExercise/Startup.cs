@@ -27,8 +27,6 @@ namespace GitExercise
             }
             while (true)
             {
-                Console.WriteLine("Console Calculator App");
-                Console.WriteLine(new string('-', 15));
 
                 Console.Write("a = ");
                 double a = double.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
@@ -56,6 +54,21 @@ namespace GitExercise
                     case "m":
                         OptionsManager.Multiply(a, b);
                         break;
+                    case "d":
+                        OptionsManager.Divide(a, b);
+                        break;
+                    case "sabs":
+                        OptionsManager.SubtractAbs(a, b);
+                        break;
+                    case "pow":
+                        OptionsManager.Power(a, b);
+                        break;
+                    case "log":
+                        OptionsManager.Log(a, b);
+                        break;
+                    case "fact":
+                        OptionsManager.Factorial(a, b);
+                        break;
                     case "dr":
                         OptionsManager.DivideRemainder(a, b);
                         break;
@@ -64,12 +77,7 @@ namespace GitExercise
                         Console.WriteLine("Goodbye");
                         Console.ReadKey(intercept: true);
                         break;
-                    case "d":
-                        OptionsManager.Divide(a, b);
-                        break;
-                    case "sabs":
-                        OptionsManager.SubtractAbs(a, b);
-                        break;
+
                 }
 
                 Console.WriteLine("Pres any key to close the app...");
