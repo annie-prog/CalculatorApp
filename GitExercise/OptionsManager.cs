@@ -25,6 +25,7 @@ namespace GitExercise
         {
             long factA = CalculateFactorial((int)a);
             long factB = CalculateFactorial((int)b);
+
             Console.WriteLine($"{a}! + {b}! = {(int)a}! + {(int)b}! = {factA + factB}");
         }
 
